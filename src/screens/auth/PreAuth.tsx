@@ -1,5 +1,5 @@
 /**
- TODO: Splash 2 in Figma
+ TODO: Splash 2 in Figma - Huy
  * Deadline
  */
 

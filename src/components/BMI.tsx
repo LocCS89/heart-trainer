@@ -1,5 +1,5 @@
 /**
- TODO:
+ TODO: BMI Component - Khang
  * Deadline
  */
 

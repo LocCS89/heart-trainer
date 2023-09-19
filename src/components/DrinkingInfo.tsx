@@ -1,5 +1,5 @@
 /**
- TODO: 
+ TODO: Drinking Info Component - Khang
  * Deadline
  */
 

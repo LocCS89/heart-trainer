@@ -1,3 +1,8 @@
+/**
+ TODO: Personal Form Component - Huy
+ * Deadline
+ */
+
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
