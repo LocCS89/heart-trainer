@@ -4,12 +4,14 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Login from "../screens/auth/Login";
 import SignUp from "../screens/auth/SignUp";
 import { AuthStackParams } from "./config";
+import PreAuth from "../screens/auth/PreAuth";
 
 const Stack = createNativeStackNavigator<AuthStackParams>();
 
 const AuthStack = () => {
   return (
     <Stack.Navigator>
+      <Stack.Screen name="PreAuth" component={PreAuth} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="SignUp" component={SignUp} />
     </Stack.Navigator>

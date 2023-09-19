@@ -1,10 +1,12 @@
 export type BottomTabsParams = {
   Home: undefined;
-  Profile: {};
-  Notification: {};
+  Advice: undefined;
+  History: undefined;
+  TrainingPlan: undefined;
 };
 
 export type AuthStackParams = {
+  PreAuth: undefined;
   Login: undefined;
   SignUp: undefined;
 };

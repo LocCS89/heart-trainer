@@ -1,10 +1,15 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+/**
+ TODO:
+ * Deadline
+ */
+
+import { StyleSheet } from "react-native";
 import React from "react";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { AuthStackParams } from "../../navigations/config";
 import { useAppDispatch } from "../../store";
 import { setUser } from "../../store/user.reducer";
-import { Button } from "native-base";
+import { Button, Text, View } from "native-base";
 
 type Props = {} & NativeStackScreenProps<AuthStackParams, "Login">;
 
