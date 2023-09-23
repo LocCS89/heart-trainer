@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 import Root from "./src/navigations/Root";
-import { NativeBaseProvider } from "native-base";
+import { NativeBaseProvider, Box } from "native-base";
 import appTheme from "./src/theme";
 import { Provider } from "react-redux";
 import store from "./src/store";
@@ -19,7 +19,7 @@ import {
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
-
+import Run from "./src/screens/main/Run";
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
@@ -48,8 +48,7 @@ export default function App() {
   return (
     <NativeBaseProvider theme={appTheme}>
       <Provider store={store}>
-        <StatusBar style="dark"/>
-        <Root />
+        <Run></Run>
       </Provider>
     </NativeBaseProvider>
   );
