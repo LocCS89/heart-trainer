@@ -19,7 +19,6 @@ import {
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
-import Run from "./src/screens/main/Run";
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
@@ -47,9 +46,7 @@ export default function App() {
 
   return (
     <NativeBaseProvider theme={appTheme}>
-      <Provider store={store}>
-        <Run></Run>
-      </Provider>
+      <Provider store={store}></Provider>
     </NativeBaseProvider>
   );
 }

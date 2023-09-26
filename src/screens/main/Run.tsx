@@ -20,6 +20,9 @@ import {
   Button,
   Pressable,
 } from "native-base";
+import { Pause } from "iconsax-react-native";
+import AppHeading from "../../components/Typograpy/AppHeading";
+import AppText from "../../components/Typograpy/AppText";
 
 const Run = () => {
   const [pause, Paused] = useState(false);
@@ -33,106 +36,79 @@ const Run = () => {
   }
   function IsStopped() {
     Stopped(true);
+    Paused(false);
   }
   return (
-    <Box p={"8px"}>
+    <ScrollView p="2.5">
       <Center>
-        <Image source={require("../../../assets/road.png")}></Image>
-        <Text fontSize={"16px"} fontWeight={"500"}>
-          Mục tiêu: 10km
-        </Text>
-        <Text fontSize={"12px"} fontWeight={"500"}>
-          Khoảng cách
-        </Text>
+        <Image source={require("../../../assets/road.png")} maxWidth="xl" />
+        <AppHeading>Mục tiêu: 10km</AppHeading>
+        <AppText textVariant="title">KHOẢNG CÁCH</AppText>
 
-        <Center
-          mt={"20px"}
-          mb={"20px"}
-          display={stopped === true ? "flex" : "none"}
-        >
-          <Text fontSize={"30px"} fontWeight={"300"}>
-            Tập luyện 1/33
-          </Text>
-          <Text fontSize={"12px"} color={"muted.400"}>
-            Bắt đầu chạy
-          </Text>
+        <Center mt="5" mb="5" display={stopped === true ? "flex" : "none"}>
+          <AppHeading textVariant="thin">Tập luyện 1/33</AppHeading>
+          <AppText textVariant="subtitle">Bắt đầu chạy</AppText>
         </Center>
 
-        <Text
-          color={"primary.600"}
-          fontSize={"36"}
-          fontWeight={"700"}
+        <AppHeading
+          textVariant="primary"
           display={stopped === true ? "flex" : "none"}
         >
           03.00 km
-        </Text>
+        </AppHeading>
 
-        <Text
-          color={"primary.600"}
-          fontSize={"36"}
-          fontWeight={"700"}
-          display={stopped === true ? "none" : "flex"}
+        <AppHeading
+          textVariant="primary"
+          display={stopped === false ? "flex" : "none"}
         >
           01.20 km
-        </Text>
+        </AppHeading>
       </Center>
 
-      <HStack justifyContent={"space-evenly"}>
+      <HStack justifyContent="space-evenly">
         <Center>
-          <Text fontSize={"12px"} color={"muted.400"} fontWeight={"300"}>
-            Thời gian
-          </Text>
-          <Text fontSize={"16px"}>00:12:00</Text>
+          <AppText textVariant="subtitle">Thời gian</AppText>
+          <AppHeading>00:12:00</AppHeading>
         </Center>
         <Center>
-          <Text fontSize={"12px"} color={"muted.400"} fontWeight={"300"}>
-            Tốc độ
-          </Text>
-          <Text fontSize={"16px"}>05:00 km/h</Text>
+          <AppText textVariant="subtitle">Tốc độ</AppText>
+          <AppHeading>05:00 km/h</AppHeading>
         </Center>
         <Center>
-          <Text fontSize={"12px"} color={"muted.400"} fontWeight={"300"}>
-            Calories
-          </Text>
-          <Text fontSize={"16px"}>0 kcal</Text>
+          <AppText textVariant="subtitle">Calories</AppText>
+          <AppHeading>100 kcal</AppHeading>
         </Center>
       </HStack>
 
       <Button
-        p={"12px"}
-        mt={"70px"}
-        borderRadius={"8px"}
+        p="3.5"
+        borderRadius="8"
         onPress={IsPaused}
         display={pause === true ? "none" : "flex"}
       >
-        <Text color={"white"} fontSize={"16px"}>
-          Tạm dừng
-        </Text>
+        <AppHeading>Tạm dừng</AppHeading>
       </Button>
 
       <HStack
-        justifyContent={"space-evenly"}
-        mb={"200px"}
+        justifyContent="space-between"
         display={pause === true ? "flex" : "none"}
-        mt={"70px"}
       >
-        <Button borderRadius={"8px"} p={"12px"} w={"167px"} onPress={IsStopped}>
-          <Text color={"white"} fontSize={"16px"}>
-            Dừng lại
-          </Text>
-        </Button>
         <Button
-          borderRadius={"8px"}
-          p={"12px"}
-          w={"167px"}
-          onPress={IsContinued}
+          borderRadius="8"
+          p="3.5"
+          w="40"
+          onPress={IsStopped}
+          bg="#FF5555"
         >
-          <Text color={"white"} fontSize={"16px"}>
-            Tiếp tục
-          </Text>
+          <AppHeading>Dừng lại</AppHeading>
+        </Button>
+        <Button borderRadius="8" p="3.5" w="40" onPress={IsContinued}>
+          <AppHeading>Tiếp tục</AppHeading>
         </Button>
       </HStack>
-    </Box>
+
+      <Box h="30"></Box>
+    </ScrollView>
   );
 };
 

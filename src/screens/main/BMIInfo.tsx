@@ -19,48 +19,31 @@ import AppHeading from "../../components/Typograpy/AppHeading";
 import AppText from "../../components/Typograpy/AppText";
 const BMIInfo = () => {
   return (
-    <Box p={"8px"}>
+    <Box mt="6">
       <VStack>
-        <HStack alignItems={"center"} justifyContent={"space-between"}>
-          <AppText textVariant="title">Thông tin hôm nay</AppText>
+        <HStack alignItems="center" justifyContent="space-between">
+          <AppHeading>Thông tin hôm nay</AppHeading>
         </HStack>
-        <Text color={"muted.400"} fontWeight={"light"} fontSize={"12px"}>
-          23 tháng 09, 2023
-        </Text>
+        <AppText textVariant="subtitle">23 tháng 09, 2023</AppText>
       </VStack>
-      <Box
-        mt={"10px"}
-        bgColor={"primary.50"}
-        borderRadius={"16px"}
-        p={"10px"}
-        pl={"15px"}
-        pr={"15px"}
-      >
-        <HStack justifyContent={"space-between"} alignItems={"center"}>
-          <AppText>BMI</AppText>
-          <Text fontSize={"12px"} fontWeight={300}>
-            Nam
-          </Text>
+      <Box mt="6" bgColor="primary.50" borderRadius="16" p="5" mb="6">
+        <HStack justifyContent="space-between" alignItems="center">
+          <AppHeading textVariant="thin">BMI</AppHeading>
+          <AppText>Nam</AppText>
         </HStack>
-        <HStack justifyContent={"space-between"} alignItems={"flex-end"}>
+        <HStack justifyContent="space-between" alignItems="flex-end">
           <VStack>
             <AppHeading textVariant="primary">21.0</AppHeading>
-            <Text color={"muted.400"} fontWeight={"light"}>
-              Bình thường
-            </Text>
+            <AppText textVariant="thin">Bình thường</AppText>
           </VStack>
           <HStack>
             <VStack>
-              <AppText textVariant="thin">175 cm</AppText>
-              <Text color={"muted.400"} fontWeight={"500"} fontSize={"12px"}>
-                Chiều cao
-              </Text>
+              <AppHeading textVariant="thin">175 cm</AppHeading>
+              <AppText textVariant="subtitle">Chiều cao</AppText>
             </VStack>
-            <VStack ml={"10px"}>
-              <AppText textVariant="thin">65 kg</AppText>
-              <Text color={"muted.400"} fontWeight={"500"} fontSize={"12px"}>
-                Cân nặng
-              </Text>
+            <VStack ml="10">
+              <AppHeading textVariant="thin">65 kg</AppHeading>
+              <AppText textVariant="subtitle">Cân nặng</AppText>
             </VStack>
           </HStack>
         </HStack>
