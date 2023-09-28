@@ -12,7 +12,7 @@ interface IConfig {
 }
 
 type Props = {
-  textVariant?: "default" | "title" | "thin" | "subtitle";
+  textVariant?: "default" | "title" | "thin" | "subtitle" | "notice" | "small";
 } & ITextProps;
 
 const config: IConfig = {
@@ -29,6 +29,14 @@ const config: IConfig = {
   },
   subtitle: {
     color: "muted.500",
+  },
+  notice: {
+    color: "warning.400",
+    fontSize: "sm",
+  },
+  small: {
+    fontSize: "sm",
+    color: "muted.400",
   },
 };
 

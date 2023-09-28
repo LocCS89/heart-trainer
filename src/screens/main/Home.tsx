@@ -24,13 +24,13 @@ import { Divider } from "native-base";
 import AppHeading from "../../components/Typograpy/AppHeading";
 import AppText from "../../components/Typograpy/AppText";
 import DrinkingInfo from "../../components/DrinkingInfo";
-import { FontAwesome } from "react-native-vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
 import BMIInfo from "./BMIInfo";
 
 const Home = () => {
   return (
-    <ScrollView>
-      <Box mt="16" p="2.5">
+    <ScrollView bg={"white"}>
+      <Box mt="16" p="3.5">
         <DrinkingInfo />
 
         <Center mt="10">
@@ -51,8 +51,13 @@ const Home = () => {
           </HStack>
         </Center>
 
-        <Button borderRadius="8" p="4" mt="10">
-          <AppHeading>Chọn</AppHeading>
+        <Button
+          borderRadius="8"
+          p="4"
+          mt="10"
+          _text={{ color: "white", fontWeight: "semibold", fontSize: "xl" }}
+        >
+          Chọn
         </Button>
 
         <Box mt="10">
@@ -60,7 +65,7 @@ const Home = () => {
           <AppText textVariant="subtitle">
             10 tháng 7, 2023 - 16 tháng 7, 2023
           </AppText>
-          <Image source={require("../../../assets/Group 2.png")} />
+          <Image source={require("../../../assets/grid.png")} />
         </Box>
 
         <BMIInfo />

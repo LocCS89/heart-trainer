@@ -17,12 +17,7 @@ import {
 } from "native-base";
 import AppHeading from "./Typograpy/AppHeading";
 import AppText from "./Typograpy/AppText";
-import {
-  FontAwesome,
-  Feather,
-  EvilIcons,
-  Entypo,
-} from "react-native-vector-icons";
+import { FontAwesome, Feather, EvilIcons, Entypo } from "@expo/vector-icons";
 const DrinkingInfo = () => {
   return (
     <Box>
@@ -39,18 +34,18 @@ const DrinkingInfo = () => {
                 ml
               </AppText>
             </HStack>
-            <AppText textVariant="subtitle">Lượng nước bạn cần uống</AppText>
+            <AppText textVariant="small">Lượng nước bạn cần uống</AppText>
 
             <HStack alignItems="center" mt="3">
-              <Icon as={EvilIcons} name="clock" color="grey" size="xl" />
-              <AppText textVariant="subtitle" ml="2">
+              <Icon as={EvilIcons} name="clock" color="grey" size="md" />
+              <AppText textVariant="small" ml="2">
                 Lần cuối cùng 15:00
               </AppText>
             </HStack>
 
-            <HStack alignItems="center" mt="3" pl="0.5">
-              <Icon as={Feather} name="bell" color="#FB923C" size="lg"></Icon>
-              <AppText textVariant="subtitle" color="#FB923C" ml="2">
+            <HStack alignItems="center" mt="3">
+              <Icon as={Feather} name="bell" color="#FB923C" size="md"></Icon>
+              <AppText textVariant="notice" ml="2">
                 Bật tính năng thông báo
               </AppText>
             </HStack>

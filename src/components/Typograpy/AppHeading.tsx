@@ -30,10 +30,15 @@ const config: IConfig = {
     fontSize: "2xl",
     fontWeight: "bold",
   },
+  smprimary: {
+    color: "primary.600",
+    fontSize: "md",
+    fontWeight: "bold",
+  },
 };
 
 type Props = {
-  textVariant?: "default" | "large" | "thin" | "primary";
+  textVariant?: "default" | "large" | "thin" | "primary" | "smprimary";
 } & IHeadingProps;
 
 const AppHeading = ({ textVariant = "default", children, ...props }: Props) => {

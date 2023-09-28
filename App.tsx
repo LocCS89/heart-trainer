@@ -20,7 +20,6 @@ import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
 SplashScreen.preventAutoHideAsync();
-
 export default function App() {
   let [fontsLoaded] = useFonts({
     Lexend_100Thin,
@@ -46,7 +45,9 @@ export default function App() {
 
   return (
     <NativeBaseProvider theme={appTheme}>
-      <Provider store={store}></Provider>
+      <Provider store={store}>
+        <Root></Root>
+      </Provider>
     </NativeBaseProvider>
   );
 }

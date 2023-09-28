@@ -27,9 +27,9 @@ const BMIInfo = () => {
         <AppText textVariant="subtitle">23 tháng 09, 2023</AppText>
       </VStack>
       <Box mt="6" bgColor="primary.50" borderRadius="16" p="5" mb="6">
-        <HStack justifyContent="space-between" alignItems="center">
-          <AppHeading textVariant="thin">BMI</AppHeading>
-          <AppText>Nam</AppText>
+        <HStack justifyContent="space-between" alignItems="center" mb="3">
+          <AppText>BMI</AppText>
+          <AppText textVariant="thin">Nam</AppText>
         </HStack>
         <HStack justifyContent="space-between" alignItems="flex-end">
           <VStack>
@@ -38,12 +38,12 @@ const BMIInfo = () => {
           </VStack>
           <HStack>
             <VStack>
-              <AppHeading textVariant="thin">175 cm</AppHeading>
-              <AppText textVariant="subtitle">Chiều cao</AppText>
+              <AppText textVariant="thin">175 cm</AppText>
+              <AppText textVariant="small">Chiều cao</AppText>
             </VStack>
             <VStack ml="10">
-              <AppHeading textVariant="thin">65 kg</AppHeading>
-              <AppText textVariant="subtitle">Cân nặng</AppText>
+              <AppText textVariant="thin">65 kg</AppText>
+              <AppText textVariant="small">Cân nặng</AppText>
             </VStack>
           </HStack>
         </HStack>
